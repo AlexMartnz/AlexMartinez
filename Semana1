@@ -50,6 +50,12 @@ print("La resta es: ",resta)
 print("La multiplicacion es: ",mult)
 print("la division es: ",div)
 
+#4 Ingrese un valor e imprima el tipo de dato
+cadena = "Alejandro"
+print(cadena)
+print(type(cadena))
+
+
 #6. Realice un programa que calcule la suma de los numeros hasta el valor ingresado Ejemplo si se ingresa 5 se tendrá que calcular 1+2+3++5.
 
 def sumaDigitos(num):
