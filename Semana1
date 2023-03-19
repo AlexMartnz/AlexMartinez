@@ -73,6 +73,21 @@ while n > 0:
 
 print(sumaT)
 
+#7 realiza un programa que lea 2 numeros por teclado y determine lo siguiente:
+print("Ingresar los dos numeros")
+n1=int(input("Numero 1:"))
+n2=int(input("Numero 2:"))
+
+if n1==n2:
+    print("Los dos numeros son iguales")
+
+elif n1>n2:
+    print(f"el primer numero {n1} es mayor que el segundo numero {n2}")
+
+elif n2>n1:
+    print(f"el segundo numero {n2} es mayor que el primer numero {n1}")
+
+
 #pregunta 9
 # definan las tuplas dentro de una lista
 
