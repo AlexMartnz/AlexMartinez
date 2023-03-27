@@ -1,1 +1,155 @@
-Ejercicios2
+##Ejercicios semana 2
+### Ejercicio nro 1
+
+def preg():
+    item=int(input("""Ingresar el número que desea trabajar:
+    1. Dibujar un cuadrado
+    2. Identificar los múltiplos de 2
+    3. Seleccionar a los mayores de edad
+       ->   """) )   
+  elif opcion ==2:
+    lista=[1,4,25,38,87]
+    for numero in lista:
+        if (numero % 2 == 0):
+            print(f"es multiplo: {numero}")
+
+
+#2 mayores de edad
+elif opcion == 3:
+
+    personas = [('Dante','45'),('Maria','34'),('Kevin','16')]
+    for edad in personas:
+        if int(edad[1])>=18:
+        
+            print(f"Mayores de edad:{edad}")
+            
+  ### ejercicio nro 2
+  
+  Biblioteca = {
+    "Categoria":["Fílosofia","Religion","Literatura","Historia"],
+    "Libros":[
+        
+            ### Titulo, Autor, Disponibilidad 
+            ["El discurso del metodo", "Rene Descartes", "prestado"],
+            ["Cuenta con Jesus","Alicia PAz", "disponible"],
+            ["Cien años de Soledad","Gabriel garcia Marquez", "disponible"],
+            ["historia del Peru","Inca Garcilazo de la Vega", "disponible"],
+            
+    ],
+    "Usuarios":[]
+}
+
+def mostrar_categoria():
+    print(Biblioteca["Categoria"])
+def mostrar_libros ():
+    print(Biblioteca["Libros"])
+def agregar_usuario():
+    print("Escriba salir para dejar de colocar usuarios")
+    nom_usuario = input("Agregue el nombre del usuario: ")
+    while nom_usuario != "salir":
+        Biblioteca["Usuarios"].append(nom_usuario)
+        nom_usuario = input("Agregue el nombre del usuario: ")
+    print("Estos son los usuarios agregados", '\n',Biblioteca['Usuarios']) 
+
+def cambiar_estado_libro():
+    print(Biblioteca["Libros"])
+    cambio = input("Ingresar el nombre del libro a cambiar ")
+    print("Estados: disponible o prestado")
+    estado = input("Ingresar el nuevo estado: ")
+    for i in range(0,3):
+        if Biblioteca["Libros"][i][0] == cambio:
+            Biblioteca["Libros"][i][2] = estado
+            print(Biblioteca["Libros"])
+        else:
+            print("No se encontro el libro")
+
+##mostrar_categoria(), mostrar_libros(), agregar_usuario()
+cambiar_estado_libro()
+
+###Ejercicio nro 3
+
+print("EJERCICIO 3")
+
+x=int(input("Ingrese un número: "))
+y=int(input("Ingrese otro número: "))
+while x==y:
+    print("--Ingrese números diferentes--")
+    a=int(input("Ingrese un número: "))
+    b=int(input("Ingrese otro número: "))
+def MayorValor(x,y):
+    if x>y:
+        return x
+    else:
+        return y
+ 
+x=MayorValor(x,y)
+print("El mayor valor es -> ",z)
+
+### Ejercicio nro 4
+
+print("Ejercicio 4")
+import sys
+variable=sys.argv
+def func_argumento(*args):
+    for i in args:
+        print(i)
+func_argumento({"Colores":{"green":"verde","red":"rojo"}},17,"Mi casa de rojo",[7,"luck",True])
+
+### Ejercicio nro 5
+
+import os
+path=os.path.abspath('..')
+for f in os.scandir(path):
+    print(f,"=>",f.path)
+    print(f.is_dir())
+def funcionRecursiva(path):
+    listaCarpeta=[]
+    for f in listaCarpeta:
+    if f.isDir():
+            funcionRecursiva(f.path)
+        else:
+            print(f.path)
+            
+            
+### Ejercicio nro 7
+
+
+Menu= """
+1)Cambiar texto a MAYUSCULA
+2)Saber la longitud de texto
+3)buscar cuantas veces sale una palabra
+"""
+print(Menu)
+opcion=int(input("Elija una opcion:"))
+
+if opcion==1:
+    print(texto.upper())
+
+elif opcion ==2:
+    print(len(texto))
+
+elif opcion == 3:
+        palabra = input("que palabra busca?:")
+        print(texto.count(palabra))
+
+else:
+    print("adios")
+
+
+### Ejercicio nro 8
+
+print("EJERCICIO 8")
+
+primos_List=[]
+for num in range(4,100000,103):#range(inicio,stop,step) 
+    cont=0
+    i=2
+    while i<num and cont==0:
+     x=num%i
+     if x==0:
+     cont+=1
+        i+=1
+    if cont==0:
+       primos_List.append(num)
+print(primos_List)
+
